@@ -1,0 +1,328 @@
+html, body {
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor:none;
+}
+
+body {
+  background: #2399a3;
+  color: #fff;
+  text-transform: uppercase;
+
+  //font: 18px 'Courier New', sans-serif;
+  font: 22px 'Courier New', sans-serif;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.italic {
+  //font-style: italic;
+}
+
+.small-text {
+  font-size: 22px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+// font-size: 16px;
+}
+
+.atm {
+  width: 100%;
+  height: 100%;
+  /* width: 798px;
+  height: 534px; */
+
+  /* background: #2399a3; */
+
+  display: flex;
+}
+
+.side-buttons {
+  white-space: nowrap;
+  width: 20%;
+  //width: 23%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0 4px;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+//  background-color: white;
+  font-weight: bold;
+//  font-size: 35px;
+}
+
+.side-buttons:last-of-type {
+  align-items: flex-end;
+  text-align: right;
+
+}
+
+.middle {
+  width: 60%;
+  height: 100%;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .abc, .fgh {
+  width: 100px;
+  height: 534px;
+  position: relative;
+  color: #000;
+  padding: 0 5px;
+}
+
+.abc {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.lu, .lt, .lm, .lb, .ru, .rt, .rm, .rb/*, .a, .b, .c, .d, .e, .f, .g, .h */ {
+  position: absolute;
+  height: 12%;
+}
+
+.lu, .ru/*, .a, .e*/ {
+  top: 32%;
+}
+
+.lt, .rt/*, .b, .f*/ {
+  top: 48.8%;
+}
+
+.lm, .rm/*, .c, .g*/ {
+  top: 65.6%;
+}
+
+.lb, .rb/*, .d, .h*/ {
+  top: 82.4%;
+}
+
+/* All initial hidden states */
+
+.persona {
+  display: none;
+  text-align: center;
+  width: 500px;
+}
+
+.cancel, .countdown, .timer, .newname, .memorytest, .tonetest, .robot, .robottest, .package, .printpoem, .session, .robot-counter, .code {
+  display: none;
+  text-align: center;
+}
+
+.timer {
+  padding-top: 20px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.robot-timer {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.persona-input {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 20px;
+}
+
+.number {
+  width: 50px;
+  height: 75px;
+  border: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.newname-name {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 48px;
+}
+
+.memorytest {
+  flex-direction: column;
+  align-items: center;
+}
+//helps to center the question
+
+.memorytest-text {
+  margin-bottom: 20px;
+  bottom: 0;
+}
+
+.memorytest-poem {
+  white-space: nowrap;
+  text-align: left;
+  margin: auto;
+}
+
+.flexstart {
+  align-items: flex-start;
+}
+
+.margintop {
+  margin-top: 30px;
+}
+
+.colour {
+  width: 120px;
+  height: 12%;
+}
+
+.p11-et {
+  background: #9debae;
+}
+
+.p12-et {
+  background: #3df5a8;
+}
+
+.p13-et {
+  background: #c1e4bc;
+}
+
+.p14-et {
+  background: #99d45e;
+}
+
+.p21-et {
+  background: #4e4e4e;
+}
+
+.p22-et {
+  background: #949494;
+}
+
+.p23-et {
+  background: #acb1b7;
+}
+
+.p24-et {
+  background: #a7a79b;
+}
+
+.p11-ru {
+  background: #4eb391;
+}
+
+.p12-ru {
+  background: #45ddb7;
+}
+
+.p13-ru {
+  background: #94ddc5;
+}
+
+.p14-ru {
+  background: #2faba3;
+}
+
+.p21-ru {
+  background: #ff0000;
+}
+
+.p22-ru {
+  background: #da4e0d;
+}
+
+.p23-ru {
+  background: #d3123c;
+}
+
+.p24-ru {
+  background: #fb747b;
+}
+
+.p11-en {
+  background: #d5cd9d;
+}
+
+.p12-en {
+  background: #f4f0d4;
+}
+
+.p13-en {
+  background: #f0eabc;
+}
+
+.p14-en {
+  background: #d9c48b;
+}
+
+.p21-en {
+  background: #989c91;
+}
+
+.p22-en {
+  background: #c4b9a9;
+}
+
+.p23-en {
+  background: #b2ad8d;
+}
+
+.p24-en {
+  background: #a79f9c;
+}
+
+.robotimage {
+  width:300px;
+  height: 200px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.robotanswers {
+  text-align: left;
+  background-color: red;
+  color: white;  
+}
+
+.two-col {
+  columns: 2;
+  column-gap: 15px;
+}
+
+.two-col li {
+  text-align: left;
+}
+
+.danger {
+  color: red;
+}
+
+.package {
+  text-align: left;
+}
+
+.credit {
+  width: 100%;
+  text-align: right;
+}
