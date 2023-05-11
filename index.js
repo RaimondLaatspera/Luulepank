@@ -1,4 +1,5 @@
 let locale="et";
+let region;
 let stage;
 let colour;
 let currentParams;
@@ -269,7 +270,6 @@ function changelang(e) {
     console.log(e);
     console.log(locale);
     if (locale != undefined) {
-      console.log("tuleb siia");
       usernames = setName();
       console.log(usernames);
       username = usernames.firstname + ' ' + usernames.lastname;
@@ -1428,7 +1428,6 @@ function sorry() {
   document.getElementById('printpoem').innerHTML = lang.sorry[locale];
   document.getElementById('printpoem').style.display = 'block';
   document.getElementById('ru').innerHTML = lang.print2[locale];
- // document.getElementById('rm').innerHTML = lang.print2[locale];
   document.addEventListener('keydown', removeCard(risk));
 }
 
@@ -1458,8 +1457,15 @@ function print(risk) {
   music.currentTime = 0;
   bell.pause();
   beep.pause();
-  resetInnerHTML(['rm','ru']);
-
+  //resetInnerHTML võtab ära teksti üleval paremal oleva nupu juurest
+  resetInnerHTML(['ru']);
+  if (locale == 'et') {
+    region = 'et-EE';
+  } else if (locale == 'en') {
+    region = 'en-GB';
+  } else {
+    region = 'ru-RU';
+  }
   document.getElementById('printpoem').style.display = 'block';
   stage = 'print';
   currentParams = risk;
@@ -1470,10 +1476,12 @@ function print(risk) {
         let size = Object.keys(poems[risk][locale]).length;
         let r = Math.floor(Math.random() * size);
         let sisu=poems[risk][locale][r];
-        sisu = sisu.replace("&nbsp;", "");
-        sisu = sisu.replace("&nbsp;", "");
-        sisu = sisu.replace('<span class="bold print-text-12">', "");
-        sisu = sisu.replace("</span>", "");
+        console.log(sisu);
+        sisu.poem = sisu.poem.replace("&nbsp;", "");
+        console.log(sisu);
+        sisu.poem = sisu.poem.replace("&nbsp;", "");
+        sisu.author = sisu.author.replace('<span class="bold print-text-12">', "");
+        sisu.author = sisu.author.replace("</span>", "");
         let time = new Date(Date.now()).toLocaleString(region);
         console.log(sisu);
 //        fetch("/kirjuta?tekst="+risk+"ja"+size+"ja"+r).then(viit => viit.text()).then(vastus => alert(vastus));
@@ -1494,12 +1502,10 @@ function print(risk) {
   // window.print();
   console.log('ootan checkcardi');
 }
-
+//Võta kaart teksti vilgutamise funktsioon
 function blink(element, time, totalBlinks) {
   totalBlinks++;
   console.log(totalBlinks);
-  console.log("reloading");
-  console.log("blink");
   element.style.visibility = 'hidden';
   setTimeout(() => {
     element.style.visibility = 'visible';
