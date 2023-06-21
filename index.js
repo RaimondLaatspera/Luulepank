@@ -116,10 +116,10 @@ function cancel(e) {
     currentTimeout && clearTimeout(currentTimeout);
     currentInterval && clearInterval(currentInterval);
     if (colour) {
-      document.getElementById('ru').classList.remove('colour', colour + '1-' + locale);
-      document.getElementById('rt').classList.remove('colour', colour + '2-' + locale);
-      document.getElementById('rm').classList.remove('colour', colour + '3-' + locale);
-      document.getElementById('rb').classList.remove('colour', colour + '4-' + locale);
+      document.getElementById('lu').classList.remove('colour', colour + '1-' + locale);
+      document.getElementById('lt').classList.remove('colour', colour + '2-' + locale);
+      document.getElementById('lm').classList.remove('colour', colour + '3-' + locale);
+      document.getElementById('lb').classList.remove('colour', colour + '4-' + locale);
     }
     resetEverything();
     document.getElementById('middle').classList.remove('flexstart');
@@ -171,10 +171,10 @@ function sessionEnd() {
   currentInterval && clearInterval(currentInterval);
   resetEverything();
   if(stage=='toneQuestions'){
-    document.getElementById('ru').classList.remove('colour', colour + '1-' + locale);
-    document.getElementById('rt').classList.remove('colour', colour + '2-' + locale);
-    document.getElementById('rm').classList.remove('colour', colour + '3-' + locale);
-    document.getElementById('rb').classList.remove('colour', colour + '4-' + locale);  
+    document.getElementById('lu').classList.remove('colour', colour + '1-' + locale);
+    document.getElementById('lt').classList.remove('colour', colour + '2-' + locale);
+    document.getElementById('lm').classList.remove('colour', colour + '3-' + locale);
+    document.getElementById('lb').classList.remove('colour', colour + '4-' + locale);  
   }
   
   document.getElementById('middle').classList.remove('flexstart');
@@ -681,10 +681,10 @@ function toneQuestions(n) {
   document.getElementById('tonetest').style.display = 'block';
 
   colour = 'p' + n;
-  document.getElementById('ru').classList.add('colour', colour + '1-' + locale);
-  document.getElementById('rt').classList.add('colour', colour + '2-' + locale);
-  document.getElementById('rm').classList.add('colour', colour + '3-' + locale);
-  document.getElementById('rb').classList.add('colour', colour + '4-' + locale);
+  document.getElementById('lu').classList.add('colour', colour + '1-' + locale);
+  document.getElementById('lt').classList.add('colour', colour + '2-' + locale);
+  document.getElementById('lm').classList.add('colour', colour + '3-' + locale);
+  document.getElementById('lb').classList.add('colour', colour + '4-' + locale);
 
   document.addEventListener('keydown', checkTone);
 }
@@ -697,7 +697,7 @@ function checkTone(e) {
   document.removeEventListener('keydown', checkTone);
   if (!sessionMessage) {
     if (e.key.toLowerCase() != 'p') {
-      if (e.key.toLowerCase() == 'e' || e.key.toLowerCase() == 'f' || e.key.toLowerCase() == 'g' || e.key.toLowerCase() == 'h') {
+      if (e.key.toLowerCase() == 'a' || e.key.toLowerCase() == 'b' || e.key.toLowerCase() == 'c' || e.key.toLowerCase() == 'd') {
         yay();
         thankyou();
       } else {
@@ -713,10 +713,10 @@ function thankyou() {
   stage = 'thankyou';
   currentParams = "";
   if (colour) {
-    document.getElementById('ru').classList.remove('colour', colour + '1-' + locale);
-    document.getElementById('rt').classList.remove('colour', colour + '2-' + locale);
-    document.getElementById('rm').classList.remove('colour', colour + '3-' + locale);
-    document.getElementById('rb').classList.remove('colour', colour + '4-' + locale);
+    document.getElementById('lu').classList.remove('colour', colour + '1-' + locale);
+    document.getElementById('lt').classList.remove('colour', colour + '2-' + locale);
+    document.getElementById('lm').classList.remove('colour', colour + '3-' + locale);
+    document.getElementById('lb').classList.remove('colour', colour + '4-' + locale);
   }
   document.getElementById('tonetest').style.display = 'block';
   document.getElementById('tonetest').innerHTML = lang.correct[locale];
@@ -1482,16 +1482,7 @@ function print(risk) {
         sisu.poem = sisu.poem.replace("&nbsp;", "");
         sisu.author = sisu.author.replace('<span class="bold print-text-12">', "");
         sisu.author = sisu.author.replace("</span>", "");
-        const d = new Date(Date.now()).toLocaleString(region);
-        let fullDate = d.toString();
-        let position = fullDate.search(",");
-        let firstHalf = fullDate.slice(0, position);
-        let secondHalf = fullDate.slice(position+1);
-        let time = firstHalf + secondHalf;
 
-        console.log(position);
-
-        console.log(time);
         console.log(sisu);
 //        fetch("/kirjuta?tekst="+risk+"ja"+size+"ja"+r).then(viit => viit.text()).then(vastus => alert(vastus));
         fetch("/kirjuta3", {
@@ -1501,8 +1492,7 @@ function print(risk) {
             },
             body: JSON.stringify({"sisu":sisu, "kes": lang.memory1[locale] + " " + username, "juhis": lang.instruct[locale],
               "juhis2": lang.instructions[locale],
-              "juhis3": lang.thanks[locale] + ' ' + lang.visit[locale],
-            "aeg":time})
+              "juhis3": lang.thanks[locale] + ' ' + lang.visit[locale]})
  //           body: JSON.stringify(sisu)
         }).then(viit => viit.text());
 //.then(vastus => alert(vastus + 'hello'));

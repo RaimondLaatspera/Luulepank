@@ -7,6 +7,7 @@ import re
 import fpdf
 import os
 
+
 app=Flask(__name__)
 p=File('/dev/usb/lp0')
 
@@ -35,15 +36,18 @@ def kirjuta2():
 def kirjuta3():
   import fpdf
   import os
+  import datetime
+  x = datetime.datetime.now()
   obj=request.json["sisu"]
   pdf = fpdf.FPDF()
-  pdf.add_page();
+  pdf.add_page()
   pdf.add_font('DejaVu', '', 'DejaVuSansCondensed.ttf', uni=True)
   pdf.set_font('DejaVu', '', 8)
   pdf.set_left_margin(-0.2)
 
 #  pdf.set_font('Arial','B',12);
-  pdf.write(5, request.json["aeg"])
+  pdf.write(5, x.strftime("%H"),":",x.strftime("%M"),":",x.strftime("%S"), "  " ,x.year)
+  pdf.ln(10)
   pdf.write(5, request.json["juhis"])
   pdf.write(5, request.json["kes"])
   pdf.ln(10)
