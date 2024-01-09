@@ -2,6 +2,18 @@ const poems = {
   1: { // No risk
     et: [
       {
+        title: 'Vooruse võlu',
+        poem: `
+          Kui näen ja kuulen sind,<br>
+          siis usun salamahti,<br>
+          et noa ja kahvliga<br>
+          end võtad riidest lahti.<br> <br>
+          (1965)
+        `,
+        author: `Betti Alver. `,
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
         title: 'Ei tule luule tuulest',
         poem: `
           Luule, see ei tule tuulest<br>
@@ -14,8 +26,165 @@ const poems = {
           hoolimata enesest.<br> <br>
           (1894)
         `,
-        author:'Anna Haava.',
-        source: 'Antoloogia "Eesti luule", 1967',
+        author: 'Anna Haava. ',
+        source: `Antoloogia "Eesti luule", 1967`
+      },
+      {
+        title: 'Eest ära!',
+        poem: `
+          "Eest ära, eluvanker veereb!<br>
+          Eest ära – muidu alla jääd!<br>
+          Või tule kaasa! Tõmba! Lükka!<br>
+          Või juhi, kui sul võimsad käed!<br>
+          Eest ära!" hüüab elu.<br> <br>
+          Eest ära! Elutee pääl seista<br>
+          ei tohi, ega puhata;<br>
+          see takistab, ja rutt on taga,<br>
+          sest aeg ei iial seisata…<br>
+          Eest ära!<br> <br>
+          (1906)
+        `,
+        author: 'Anna Haava. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Kes on kaevu kaevajad',
+        poem: `
+          Kes on kaevu kaevajad,<br>
+          ärgu kartku vett:<br>
+          kui sa maja ehitad,<br>
+          nõuab savi kätt!<br> <br>
+          Meheks see, kes muda maha<br>
+          jätab pärast teo taha!<br>
+          Puhtus tõused vägevalt<br>
+          välja iga koore alt! 
+        `,
+        author: 'Lydia Koidula. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Isamaast ikka!',
+        poem: `
+          "Isamaad ikka jälle?<br>
+          Kas sa muud ei mõista siis?<br>
+          Kas sa muud ei tea laulda?<br>
+          Vanaks ammu läind see viis!"<br> <br>
+          Muud ei, jah, ma tea laulda:<br>
+          isamaa – uus igavest!<br>
+          Keeb see sõna minu rinnas:<br>
+          hüüab puust ja õilmetest.
+        `,
+        author: 'Lydia Koidula. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Väike laul',
+        poem: `
+          Üks väike laul oli rannas maas<br>
+          kesk merekarpe ja adru.<br>
+          Üks väike laul oli rannas maas<br>
+          täna hommikul peale sadu.<br> <br>
+          Ja oli sel laulul üksainuke<br>
+          merevaigune värsinarmas:<br>
+          sina, sina oled mu ainuke<br>
+          surmatunnini armas.<br> <br>
+          (1965)
+        `,
+        author: 'Ellen Niit. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Usk ja teadused',
+        poem: `
+          Mis ustakse, seda ei teata mitte,<br>
+          mis teatakse, seda ei usta mitte.<br>
+          Kuidas käsid sa uskuda, kui ma juba tean?<br>
+          Kuidas võid sa teada, kui sa usud?<br>
+          Tahad sa uskuda, siis ära tea midagi,<br>
+          tahad sa teada, siis ära usu midagi.<br> <br>
+          (1877)
+        `,
+        author: 'Ado Reinvald. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: "",
+        poem: `
+          Naerame sõber, naerame nii,<br>
+          et kogu maailm naerma võiks hakata.<br>
+          Nutame sõber, nutame nii,<br>
+          et mure saaks sedamaid lakata.<br>
+          Räägime sõber, räägime nii,<br>
+          et sõna maailma nakatab.<br>
+          Vaikime sõber, vaikime nii,<br>
+          et süda mõtetest pakatab.<br> <br>
+          (1961)
+        `,
+        author: 'Juhan Saar. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Kuldne kesktee',
+        poem: `
+          Kui paras-kõrge on su lend,<br>
+          saad leiba alati.<br>
+          Nii mõni keskelt-läbi-vend<br>
+          ju pronksi valati.<br> <br>
+          Kui aga asud jälgima<br>
+          liig kõrgeid ideaale,<br>
+          pead virelema, nälgima<br>
+          või – sõitma välismaale.<br> <br>
+          (1934)
+        `,
+        author: 'August Sang. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: 'Lõpp ja algus',
+        poem: `
+          Kas tunnete: väriseb maa!<br>
+          Kas kuulete: kisendab veri!<br>
+          Nüüd tuleb kas ei või jaa!<br>
+          Nüüd on kallastest tõusnud meri.<br>
+          Olge valmis!<br> <br>
+          Me seisame kahe riigi väraval:<br>
+          see üks on pimedus ja teine valgus.<br>
+          Me, noored, ootame pilgul säraval:<br>
+          nüüd see ligineb: lõpp ja algus!<br>
+          Viimaks ometi.<br> <br>
+          (1905)
+        `,
+        author: 'Gustav Suits. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: "",
+        poem: `
+          Su valgete hammaste naer,<br>
+          su hammaste valge naer<br>
+          on maikellukeste helin<br>
+          sarapuusalu all hämaras,<br>
+          armsam.<br> <br>
+          (1959)
+        `,
+        author: 'Aleksander Suuman. ',
+        source: `Antoloogia "Eesti luule", 1967`,
+      },
+      {
+        title: '∞',
+        poem: `
+          Vaene väike Lõpmatus<br>
+          nukker Kõikmahutaja<br>
+          tean millest sa unistad<br>
+          külmetades seal<br>
+          taga-taga-taga<br> <br>
+          Suhkrukringliks<br>
+          sasipäise poisi pihku<br>
+          ihkad sa kahaneda…<br> <br>
+          (1965)
+        `,
+        author: 'Enn Vetemaa. ',
+        source: `Antoloogia "Eesti luule", 1967`,
       },
     ],
     en: [
@@ -1507,9 +1676,7 @@ const poems = {
           SAVISAAR
         `,
         author:'Sveta Grigorjeva. ',
-        source: `
-          kunagi ehmusin… jt luuletusi, 2014
-        `,
+        source: `kunagi ehmusin… jt luuletusi, 2014`,
       },
       {
         title: "",
@@ -1519,9 +1686,7 @@ const poems = {
         räägi temaga
         `,
         author:'Aapo Ilves. ',
-        source: `
-          Looming 8, 2009
-        `,
+        source: `Looming 8, 2009`,
       },
       {
         title: "",
@@ -1544,9 +1709,7 @@ const poems = {
           vastu minu moll!
         `,
         author:'Aapo Ilves. ',
-        source: `
-          ERR, kultuuriportaal, 2019
-        `,
+        source: `ERR, kultuuriportaal, 2019`,
       },
       {
         title: "",
@@ -1556,9 +1719,7 @@ const poems = {
           KÕIKI SÄÄSKI HAMMUSTAN!
         `,
         author:'Aapo Ilves. ',
-        source: `
-          Täheke, 2/2005
-        `,
+        source: `Täheke, 2/2005`,
       },
       {
         title: 'Spordilood 3',
@@ -1628,7 +1789,7 @@ const poems = {
           ühtaegu<br>
           raske ja kerge
         `,
-        author:'Jan Kaus.',
+        author:'Jan Kaus. ',
         source: '',
       },
       {
